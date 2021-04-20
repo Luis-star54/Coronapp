@@ -1,0 +1,389 @@
+:root{
+    /* colores */
+
+    --green: #1D957F;
+    --blue: #4285F4;
+    --grey:#616161;
+    --just-black:#000000;
+    --warm-white:#FAFBFD;
+    --just-white:#FFFFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    min-width:  320px;
+}
+.header-container__logo {
+    margin-top: 10px;
+}
+.header-container__menu {
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.header-container__menu img {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.header-container__list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--green);
+    width: 120px;
+    height: 70vh;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: ease; 
+    border-radius: 20% 0 0 60%;
+    overflow-x: none;
+}
+.active {
+         transform: translateX(150px);  
+}
+.header-container__list ul {
+    padding: 80px 0px 20px 0px;
+
+}
+.header-container__list li {
+    padding: 8px 10px;
+    list-style: none;
+    text-align: center;
+}
+.header-container__list li:hover {
+    box-shadow: 2px 0px 5px 2px rgb(5, 65, 65);
+    color: var(--just-black);
+}
+ 
+
+.header-container__list a {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--just-white);
+    
+}
+
+main {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows:  600px 600px 200px 800px 850px;
+    
+}
+ .container-family {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    min-width: 320px;
+} 
+.titles-containers{
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.titles-containers--title {
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 126%;
+    color: var(--just-black);
+}
+.titles-containers--paragraph {
+    padding-top: 11px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 138.5%;
+    color: var(--grey);
+}
+.titles-containers--button{
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    letter-spacing: 0.14em;
+    padding: 8px;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid rgb(5, 35, 35);
+    border-radius: 10px;
+    /* tipografias */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    color: var(--warm-white);
+    background-color: var(--green);
+    text-decoration: none;
+}
+
+.container-family__video-container{
+    width: 300;
+    height: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+.video-container__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Rubik' , sans-serif;
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 126%;
+    letter-spacing: 0.165em;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+}
+.video-container__icon span{
+    display: inline-block;
+    margin-right: 6px;
+    background-image: url(../assets/icons/play.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+}
+.video-container__img{
+    margin-top: 44px;
+    width: 320px;
+    height: 200px;
+}
+.prevetion-container{
+   
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1024px;
+    height: auto;
+}
+.prevetion-imagen-container{
+    width: 300px;
+     position: relative; 
+    height: auto;
+}
+.imagen-container__rectangulo{
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    top: 40px;  
+    width: 100px;
+    height: 100px;  
+    background-color: var(--green);
+    border-radius: 21px;
+}
+.imagen-container__information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: calc(40% - 90px);
+    top: 1px; 
+    width: 247px;
+    height: 440px;
+    background-color: var(--just-white);
+    border: 2px solid var(--green);
+    border-radius: 14px;
+    box-shadow: 0px 2.75px 2.75px rgba(0, 0, 0, 0.25);
+}
+.imagen-container__information--img{
+    margin-top: 68px;
+    width: 179px;
+    height: 179px;
+}
+.imagen-container__information--title{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    color: #262626;
+}
+.imagen-container__information--paragraph{
+ 
+    margin-top: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.34375px;
+    color: #262626;
+}
+
+.prevention--title{
+    font-size: 3.5rem;
+}
+.experts-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+}
+.data-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+}
+.data-container__items{
+     margin-top: 16px; 
+     align-items: center;
+}
+.data-container__numbers{
+    font-family: 'Rubik' , sans-serif;
+    font-weight: bold;
+    font-size: 3.6rem;
+    line-height: 4.3rem;
+    color: var(--green);
+}
+.data-container__text{
+    font-family: 'Rubik' , sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.37em;
+    text-transform: uppercase;
+    color: (var(--just-black));
+}
+.experts-container-title{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.experts-container__video{
+    margin-top: 40px;
+    position: relative;
+}
+.experts-container__video-img {
+    
+    width: 270px;
+    height: 185px;
+    cursor: pointer;
+    box-shadow: 0px 2.61708px 11.7768px rgba(88, 126, 236, 0.18);
+    border-radius: 6px;
+}
+.experts-container__video span{
+    position: absolute;
+    left: calc(50% - 10px);
+    top: 80px;
+    background-image: url(../assets/icons/play.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+.last-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+    width: 100%;
+    height: auto;
+}
+.change-color {
+    color: var(--green);
+}
+.cards-containers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    width: 278px;
+    max-width: 600px;
+    height: 276px;
+    background: var(--just-white);
+    box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+    border-radius: 8px;
+}
+.item{
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cards-containers__person{
+    margin-top: 15px;
+    background-image: url(../assets/icons/persona.svg);
+    width: 60px;
+    height: 71px;
+}
+.cards-containers__medical{
+    background-image: url(../assets/icons/doctor.svg);
+    width: 63px;
+    height: 72px;
+}
+.cards-containers__heart{
+    background-image: url(../assets/icons/heart.svg);
+    width: 87px;
+    height: 72px;
+}
+.cards-containers__title{
+    margin-top: 10px;
+    font-family: 'Rubik' , sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 138.5%;
+    letter-spacing: 00.08em;
+    color: var(--just-black);
+
+}
+.cards-containers__text{
+    margin-top: 20px;
+    font-family: 'Rubik' , sans-serif;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 138.5%;
+    letter-spacing: 0.08em;
+    color: var(--grey);
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+.footer-container__items{
+    margin-top: 35px;
+    width: 153px;
+    height: 60px;
+    cursor: pointer;
+}
